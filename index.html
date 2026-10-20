@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#120c3a">
+  <title>نَغَم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="sky"></canvas>
+
+  <section id="home" class="screen active">
+    <div class="home-gems" id="homeGems"></div>
+    <h1 class="logo">نَغَم</h1>
+    <p class="tagline">لعبة البلّورات الموسيقية — كل تطابق نغمة، وكل سلسلة لحن</p>
+    <button class="btn big" id="playBtn">العب</button>
+    <button class="btn ghost" id="homeSound">🔊 الصوت شغّال</button>
+  </section>
+
+  <section id="map" class="screen">
+    <header class="bar">
+      <button class="icon-btn" id="mapBack" aria-label="رجوع">→</button>
+      <h2>سما النغم</h2>
+      <div class="total-stars"><span id="totalStars">0</span> ★</div>
+    </header>
+    <div class="map-scroll" id="mapScroll"></div>
+  </section>
+
+  <section id="play" class="screen">
+    <header class="hud">
+      <div class="hud-row">
+        <button class="icon-btn" id="pauseBtn" aria-label="إيقاف مؤقت">⏸</button>
+        <div class="hud-level" id="hudLevel">المرحلة 1</div>
+        <div class="beat" id="beat" title="اتحرك لما الدايرة تقفل">
+          <div class="beat-ring"></div>
+          <div class="beat-core"></div>
+        </div>
+        <div class="hud-moves"><span id="hudMoves">0</span><small>حركة</small></div>
+      </div>
+      <div class="score-row">
+        <div class="score-num" id="hudScore">0</div>
+        <div class="score-bar">
+          <div class="score-fill" id="scoreFill"></div>
+          <span class="score-star" id="star1">★</span>
+          <span class="score-star" id="star2">★</span>
+          <span class="score-star" id="star3">★</span>
+        </div>
+      </div>
+      <div class="goals" id="hudGoals"></div>
+    </header>
+    <div class="board-wrap">
+      <canvas id="board"></canvas>
+    </div>
+  </section>
+
+  <div class="modal-back" id="modal">
+    <div class="modal" id="modalBox"></div>
+  </div>
+
+  <script src="js/levels.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
